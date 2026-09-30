@@ -6,6 +6,46 @@
     <title>Document</title>
 </head>
 <body>
+    <section class="services">
+  <article class="service-card">
+    <h2>Matthys Brinkmans</h2>
+    <p>Courte description du service.</p>
+  </article>
+
+  <article class="service-card">
+    <h2>Lucas Devrin</h2>
+    <p>S'occupe des Carrés Vip</p>
+  </article>
+
+  <article class="service-card">
+    <h2>Maël Butor-Blamont</h2>
+    <p>Courte description du service.</p>
+  </article>
+</section>
+
+<style>
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+  }
+
+  .service-card h2 {
+    margin-top: 0;
+  }
+
+  @media (max-width: 700px) {
+    .services {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
     
 </body>
 </html>
