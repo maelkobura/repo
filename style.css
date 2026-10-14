@@ -1,3 +1,53 @@
-* {
-    margin: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --primary: #f59e0b;
+  --text: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-top: 4px solid var(--primary);
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2);
+}
+
+.service-card h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+@media (max-width: 700px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
 }
